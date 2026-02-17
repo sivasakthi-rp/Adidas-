@@ -337,3 +337,106 @@ box-shadow: var(--box-shadow);
 scaleX(-1) flips the image along the X-axis.
 
 -webkit-transform is for Safari browser compatibility. */
+
+/* ================= MOBILE DEVICES (max-width: 768px) ================= */
+@media (max-width: 768px) {
+
+    /* Reduce section padding */
+    section {
+        padding: 40px 20px;
+    }
+
+    /* Header adjustments */
+    header {
+        padding: 15px 20px;
+    }
+
+    /* Show menu icon */
+    .menu-icon {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    /* Hide navbar by default (for hamburger menu) */
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        flex-direction: column;
+        background: var(--bg-color);
+        width: 220px;
+        padding: 20px;
+        box-shadow: var(--box-shadow);
+        transition: 0.3s;
+    }
+
+    /* When active (you toggle with JS) */
+    .navbar.active {
+        right: 0;
+    }
+
+    .navbar a {
+        padding: 10px 0;
+    }
+
+    /* Home section stack properly */
+    .home {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .home-text h1 {
+        font-size: 2rem;
+    }
+
+    /* Product grid smaller */
+    .product-container {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+
+    /* Reviews grid smaller */
+    .reviews-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Search box smaller */
+    .search-box input {
+        width: 200px;
+    }
+
+    /* Cart width adjust */
+    .cart {
+        width: 90%;
+        right: 5%;
+    }
+
+    /* User popup adjust */
+    .user {
+        right: 10px;
+        width: 90%;
+    }
+
+}
+
+/* ================= SMALL PHONES (max-width: 480px) ================= */
+@media (max-width: 480px) {
+
+    .home-text h1 {
+        font-size: 1.6rem;
+    }
+
+    .heading h1 {
+        font-size: 1.3rem;
+    }
+
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .product-container {
+        grid-template-columns: 1fr;
+    }
+
+}
